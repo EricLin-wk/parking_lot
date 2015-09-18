@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns="http://www.springframework.org/schema/beans"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <bean id="ticketService" class="com.parking.service.impl.TicketServiceImpl" scope="singleton"/>
+
+    <bean id="gateService" class="com.parking.service.impl.GateServiceImpl" scope="singleton"/>
+
+    <bean id="capacityControlServiceImpl" class="com.parking.service.impl.CapacityControlServiceImpl"
+          scope="singleton">
+        <constructor-arg type="int" value="2"/>
+        <constructor-arg type="double" value="3.50"/>
+    </bean>
+
+</beans>
