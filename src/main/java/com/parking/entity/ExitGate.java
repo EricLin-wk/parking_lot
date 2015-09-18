@@ -7,12 +7,12 @@ import org.apache.commons.lang.builder.ToStringBuilder;
  */
 public class ExitGate extends Gate {
 
-    public ExitGate(final String name) {
-        super(name);
-    }
+  public ExitGate(final String name) {
+    super(name);
+  }
 
-    @Override
-    public String toString() {
-        return ToStringBuilder.reflectionToString(this);
-    }
+  @Override
+  public String toString() {
+    return ToStringBuilder.reflectionToString(this);
+  }
 }

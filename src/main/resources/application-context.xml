@@ -3,14 +3,16 @@
        xmlns="http://www.springframework.org/schema/beans"
        xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
 
-    <bean id="ticketService" class="com.parking.service.impl.TicketServiceImpl" scope="singleton"/>
+  <bean id="ticketService" class="com.parking.service.impl.TicketServiceImpl" scope="singleton"/>
 
-    <bean id="gateService" class="com.parking.service.impl.GateServiceImpl" scope="singleton"/>
+  <bean id="gateService" class="com.parking.service.impl.GateServiceImpl" scope="singleton"/>
 
-    <bean id="capacityControlServiceImpl" class="com.parking.service.impl.CapacityControlServiceImpl"
-          scope="singleton">
-        <constructor-arg type="int" value="2"/>
-        <constructor-arg type="double" value="3.50"/>
-    </bean>
+  <bean id="capacityControlServiceImpl" class="com.parking.service.impl.CapacityControlServiceImpl"
+        scope="singleton">
+    <constructor-arg type="int" value="3"/>
+    <!-- Parking Lot Capacity -->
+    <constructor-arg type="double" value="3.50"/>
+    <!-- Hourly Parking Rate -->
+  </bean>
 
 </beans>
